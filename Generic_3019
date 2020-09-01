@@ -1,0 +1,73 @@
+https://pypi.org/project/prov/
+
+https://provenance.readthedocs.io/en/latest/intro-guide.html
+
+Note: Start the project with login1.py
+
+.open proven1
+
+CREATE TABLE user
+(
+uname VARCHAR(40),
+userid VARCHAR(15),
+utype VARCHAR(1),
+passwd VARCHAR(15),
+mobile varchar(10),
+email varchar(40)
+);
+
+CREATE TABLE log
+(
+userid VARCHAR(15),
+utype VARCHAR(1),
+chngid  VARCHAR(1),
+cid varchar(10)
+);
+sqlite> insert into log values('A001','A','1','001');
+sqlite> insert into log values('A001','A','1','001');
+sqlite> insert into log values('A001','A','1','001');
+sqlite> insert into log values('A001','A','1','001');
+sqlite> insert into log values('A001','A','1','001');
+sqlite> insert into log values('A001','A','1','001');
+sqlite> insert into log values('A001','A','2','001');
+sqlite> insert into log values('A001','A','2','001');
+sqlite> insert into log values('A001','A','2','001');
+sqlite> insert into log values('A001','A','2','001');
+sqlite> insert into log values('A001','A','2','001');
+sqlite> insert into log values('U001','U','2','001');
+sqlite> insert into log values('U001','U','2','001');
+sqlite> insert into log values('U001','U','2','001');
+sqlite> insert into log values('U001','U','2','001');
+sqlite> insert into log values('U001','U','2','001');
+sqlite> insert into log values('U001','U','1','001');
+sqlite> insert into log values('U001','U','1','001');
+sqlite> insert into log values('U001','U','1','001');
+
+CREATE TABLE change
+(
+chid  VARCHAR(1),
+chdesc VARCHAR(40)
+);
+insert into change values('1','Data Entry Mistake');
+insert into change values('2','User Requested for change');
+
+CREATE TABLE customer
+(
+cid varchar(10),
+cname varchar(40),
+addr1 varchar(255),
+addr2 varchar(255),
+aadharid varchar(10),
+mobileid varchar(10)
+);
+
+Registration screen
+Login screen
+New Customer screen
+Update customer screen - get details, update deatils
+extract csv
+reports - Changes done during ...
+Changes done by admin
+Changes done by users
+changes done due to data entry mistakes
+Changes done for a given customer
